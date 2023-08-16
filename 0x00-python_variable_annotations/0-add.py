@@ -3,7 +3,7 @@
 """ A python module that returns the summation of two float numbers """
 
 
-def add(a: float, b:float) -> float:
+def add(a: float, b: float) -> float:
     """ A function that takes two float numbers and returns their sum"""
     return a + b
 

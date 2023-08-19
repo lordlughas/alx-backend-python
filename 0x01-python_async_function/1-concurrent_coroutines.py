@@ -16,7 +16,7 @@ from typing import List
 
 
 async def wait_n(n: int, max_delay: int) -> List[float]:
-    ''' returns a sorted list of float numbers gotten randomly'''
+    ''' function that returns a sorted list of float numbers gotten randomly'''
     wait_random = __import__('0-basic_async_syntax').wait_random
 
     delay_list = []

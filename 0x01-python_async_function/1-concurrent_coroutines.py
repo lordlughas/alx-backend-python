@@ -1,26 +1,16 @@
 #!/usr/bin/env python3
-'''Task 1's module
+'''Task 2's module.
 '''
-from typing import List
 import asyncio
+import time
 
-async def wait_n(n: int, max_delay: int) -> List[float]:
+
+wait_n = __import__('1-concurrent_coroutines').wait_n
+
+
+def measure_time(n: int, max_delay: int) -> float:
+    '''Computes the average runtime of wait_n.
     '''
-    function that returns a sorted list of float numbers gotten randomly
-    '''
-    wait_random = __import__('0-basic_async_syntax').wait_random
-
-    delay_list = []
-    i = 0
-
-    while i < n:
-        delay_list.append(await wait_random(max_delay))
-        i += 1
-
-    return sorted(delay_list)
-
-
-if __name__ == '__main__':
-    print(asyncio.run(wait_n(5, 2)))
-    print(asyncio.run(wait_n(7, 4)))
-    print(asyncio.run(wait_n(10, 0)))
+    start_time = time.time()
+    asyncio.run(wait_n(n, max_delay))
+    return (time.time() - start_time) / n

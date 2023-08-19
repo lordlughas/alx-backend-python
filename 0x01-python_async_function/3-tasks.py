@@ -1,4 +1,3 @@
-dsifjdsf
 #!/usr/bin/env python3
 
 
@@ -14,7 +13,7 @@ import asyncio
 
 
 def task_wait_random(max_delay: int) -> asyncio.Task:
-    '''A function that creates a task for the scheduler and returns the scheduled task'''
+    '''A function that creates a task for the scheduler'''
 
     wait_random = __import__('0-basic_async_syntax').wait_random
 
